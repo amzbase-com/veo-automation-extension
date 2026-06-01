@@ -1,13 +1,25 @@
 <!--
-  НАСТРОЙКА — перед публикацией замените эти два плейсхолдера во всех файлах:
-    {{WEBSITE_URL}}    →  ваш официальный сайт, например https://veo-automation.example.com
-    {{EXTENSION_URL}}  →  URL вашей страницы в Chrome Web Store (без query-строки)
-  Ссылки на расширение уже добавляют ?hl={lang} в каждом языковом файле. Выполните глобальный
-  поиск/замену по всем 7 файлам README (README.md, README_zh/ko/ja/de/fr/ru.md).
+  LINK STATUS: INTERIM. The website and Chrome Web Store listing are not live yet,
+  so every "Install" / "Website" link currently points to THIS GitHub repo as a
+  non-broken placeholder. The page is fully public and indexable; swap in the real
+  URLs the moment they go live.
+
+  How links are distinguishable:
+    - Extension/Install links end with  ...veo-automation-extension?hl=<lang>
+    - Website links are the bare URL     ...veo-automation-extension   (no ?hl)
+
+  One-shot swap across all 7 README files (run from repo root). ORDER MATTERS —
+  do the ?hl= (extension) line FIRST so the website line below it doesn't catch
+  the extension links:
+
+    sed -i '' \
+      -e 's|https://github.com/amzbase-com/veo-automation-extension?hl=|YOUR_STORE_URL?hl=|g' \
+      -e 's|https://github.com/amzbase-com/veo-automation-extension|YOUR_WEBSITE_URL|g' \
+      README*.md
 -->
 
-[![Установить из Chrome Web Store](https://img.shields.io/badge/⬇_Установить-Chrome_Web_Store-success?style=for-the-badge&logo=googlechrome&logoColor=white)]({{EXTENSION_URL}}?hl=ru)
-[![Сайт](https://img.shields.io/badge/🌐_Сайт-Перейти-blue?style=for-the-badge)]({{WEBSITE_URL}})
+[![Установить из Chrome Web Store](https://img.shields.io/badge/⬇_Установить-Chrome_Web_Store-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/amzbase-com/veo-automation-extension?hl=ru)
+[![Сайт](https://img.shields.io/badge/🌐_Сайт-Перейти-blue?style=for-the-badge)](https://github.com/amzbase-com/veo-automation-extension)
 
 # 🎬 VEO Automation — пакетная автоматизация Google Flow для видео VEO 3 и изображений Nano Banana
 
@@ -70,7 +82,7 @@ VEO Automation убирает его:
 
 ### Chrome Web Store (рекомендуется)
 
-1. Откройте [**страницу VEO Automation**]({{EXTENSION_URL}}?hl=ru) в Chrome Web Store.
+1. Откройте [**страницу VEO Automation**](https://github.com/amzbase-com/veo-automation-extension?hl=ru) в Chrome Web Store.
 2. Нажмите **Установить** → **Установить расширение**.
 3. Закрепите расширение: нажмите на иконку-пазл на панели инструментов Chrome, затем на значок закрепления рядом с **VEO Automation**, чтобы в следующий раз оно было в один клик.
 
@@ -249,7 +261,7 @@ Chrome 137+ и браузеры на базе Chromium (Edge, Brave). Требу
 - **Ограниченные разрешения.** Доступ к хостам ограничен `labs.google/*` (для автоматизации Flow) и собственным бэкендом расширения (для входа и квоты).
 - **Разрешение отладчика** используется исключительно для отправки доверенных событий ввода в Google Flow, которые требуются странице — см. [Быстрый старт](#-быстрый-старт).
 
-Все подробности: [{{WEBSITE_URL}}]({{WEBSITE_URL}})
+Все подробности: [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension)
 
 ---
 
@@ -260,14 +272,14 @@ VEO Automation работает по модели **freemium**:
 - **Бесплатно** — дневная квота генерации, которая сбрасывается каждый день. Отлично подходит для знакомства и нечастого использования.
 - **Pro** — повышенная или безлимитная квота для активных пользователей, запускающих большие пакеты.
 
-Войдите в аккаунт в боковой панели, чтобы увидеть свою текущую квоту. Управляйте тарифом на [{{WEBSITE_URL}}]({{WEBSITE_URL}}).
+Войдите в аккаунт в боковой панели, чтобы увидеть свою текущую квоту. Управляйте тарифом на [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension).
 
 ---
 
 ## 🌐 Ссылки
 
-- **Установить:** [Chrome Web Store]({{EXTENSION_URL}}?hl=ru)
-- **Сайт:** [{{WEBSITE_URL}}]({{WEBSITE_URL}})
+- **Установить:** [Chrome Web Store](https://github.com/amzbase-com/veo-automation-extension?hl=ru)
+- **Сайт:** [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension)
 - **Google Flow:** [labs.google/fx/tools/flow](https://labs.google/fx/tools/flow)
 
 ---

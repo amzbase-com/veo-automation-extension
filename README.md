@@ -1,13 +1,25 @@
 <!--
-  SETUP — replace these two placeholders everywhere before publishing:
-    {{WEBSITE_URL}}    →  your official site, e.g. https://veo-automation.example.com
-    {{EXTENSION_URL}}  →  your Chrome Web Store listing URL (no query string)
-  The extension links already append ?hl={lang} per language file. Do a global find/replace
-  across all 7 README files (README.md, README_zh/ko/ja/de/fr/ru.md).
+  LINK STATUS: INTERIM. The website and Chrome Web Store listing are not live yet,
+  so every "Install" / "Website" link currently points to THIS GitHub repo as a
+  non-broken placeholder. The page is fully public and indexable; swap in the real
+  URLs the moment they go live.
+
+  How links are distinguishable:
+    - Extension/Install links end with  ...veo-automation-extension?hl=<lang>
+    - Website links are the bare URL     ...veo-automation-extension   (no ?hl)
+
+  One-shot swap across all 7 README files (run from repo root). ORDER MATTERS —
+  do the ?hl= (extension) line FIRST so the website line below it doesn't catch
+  the extension links:
+
+    sed -i '' \
+      -e 's|https://github.com/amzbase-com/veo-automation-extension?hl=|YOUR_STORE_URL?hl=|g' \
+      -e 's|https://github.com/amzbase-com/veo-automation-extension|YOUR_WEBSITE_URL|g' \
+      README*.md
 -->
 
-[![Download on Chrome Web Store](https://img.shields.io/badge/⬇_Install-Chrome_Web_Store-success?style=for-the-badge&logo=googlechrome&logoColor=white)]({{EXTENSION_URL}}?hl=en)
-[![Website](https://img.shields.io/badge/🌐_Website-Visit-blue?style=for-the-badge)]({{WEBSITE_URL}})
+[![Download on Chrome Web Store](https://img.shields.io/badge/⬇_Install-Chrome_Web_Store-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/amzbase-com/veo-automation-extension?hl=en)
+[![Website](https://img.shields.io/badge/🌐_Website-Visit-blue?style=for-the-badge)](https://github.com/amzbase-com/veo-automation-extension)
 
 # 🎬 VEO Automation — Batch Google Flow Automation for VEO 3 Video & Nano Banana Images
 
@@ -70,7 +82,7 @@ If you searched for a *Google Flow batch tool*, *VEO 3 bulk generator*, or a way
 
 ### Chrome Web Store (recommended)
 
-1. Open the [**VEO Automation listing**]({{EXTENSION_URL}}?hl=en) on the Chrome Web Store.
+1. Open the [**VEO Automation listing**](https://github.com/amzbase-com/veo-automation-extension?hl=en) on the Chrome Web Store.
 2. Click **Add to Chrome** → **Add extension**.
 3. Pin the extension: click the puzzle-piece icon in Chrome's toolbar, then the pin next to **VEO Automation**, so it's one click away next time.
 
@@ -249,7 +261,7 @@ Chrome 137+ and Chromium-based browsers (Edge, Brave). A side panel is required.
 - **Scoped permissions.** Host access is limited to `labs.google/*` (to automate Flow) and the extension's own backend (for sign-in and quota).
 - **The debugger permission** is used solely to send trusted input events to Google Flow, which the page requires — see [Quick Start](#-quick-start).
 
-Full details: [{{WEBSITE_URL}}]({{WEBSITE_URL}})
+Full details: [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension)
 
 ---
 
@@ -260,14 +272,14 @@ VEO Automation is **freemium**:
 - **Free** — a daily generation quota that resets every day. Great for trying it out and light use.
 - **Pro** — higher or unlimited quota for power users running large batches.
 
-Sign in inside the side panel to see your current quota. Manage your plan at [{{WEBSITE_URL}}]({{WEBSITE_URL}}).
+Sign in inside the side panel to see your current quota. Manage your plan at [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension).
 
 ---
 
 ## 🌐 Links
 
-- **Install:** [Chrome Web Store]({{EXTENSION_URL}}?hl=en)
-- **Website:** [{{WEBSITE_URL}}]({{WEBSITE_URL}})
+- **Install:** [Chrome Web Store](https://github.com/amzbase-com/veo-automation-extension?hl=en)
+- **Website:** [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension)
 - **Google Flow:** [labs.google/fx/tools/flow](https://labs.google/fx/tools/flow)
 
 ---
