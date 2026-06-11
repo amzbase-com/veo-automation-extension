@@ -1,24 +1,21 @@
 <!--
-  LINK STATUS: INTERIM. The website and Chrome Web Store listing are not live yet,
-  so every "Install" / "Website" link currently points to THIS GitHub repo as a
-  non-broken placeholder. The page is fully public and indexable; swap in the real
-  URLs the moment they go live.
+  LINK STATUS: PARTIAL. The Chrome Web Store listing is LIVE — every "Install"
+  link points to it. The official website is NOT live yet, so every bare
+  "Website" link still points to THIS GitHub repo as a non-broken placeholder.
+  Swap in the real website URL the moment it goes live.
 
   How links are distinguishable:
-    - Extension/Install links end with  ...veo-automation-extension?hl=<lang>
-    - Website links are the bare URL     ...veo-automation-extension   (no ?hl)
+    - Install links are the Chrome Web Store URL, ending with  ...?hl=<lang>  (live)
+    - Website links are the bare repo URL  ...veo-automation-extension  (no ?hl, placeholder)
 
-  One-shot swap across all 7 README files (run from repo root). ORDER MATTERS —
-  do the ?hl= (extension) line FIRST so the website line below it doesn't catch
-  the extension links:
+  One-shot swap of the website placeholder across all 7 README files (run from repo root):
 
     sed -i '' \
-      -e 's|https://github.com/amzbase-com/veo-automation-extension?hl=|YOUR_STORE_URL?hl=|g' \
       -e 's|https://github.com/amzbase-com/veo-automation-extension|YOUR_WEBSITE_URL|g' \
       README*.md
 -->
 
-[![Download on Chrome Web Store](https://img.shields.io/badge/⬇_Install-Chrome_Web_Store-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/amzbase-com/veo-automation-extension?hl=en)
+[![Download on Chrome Web Store](https://img.shields.io/badge/⬇_Install-Chrome_Web_Store-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/veo-flow-automation-%E2%80%94-bat/inmkimakahiennggieafocbmfjlmfbhn?hl=en)
 [![Website](https://img.shields.io/badge/🌐_Website-Visit-blue?style=for-the-badge)](https://github.com/amzbase-com/veo-automation-extension)
 
 # 🎬 VEO Automation — Batch Google Flow Automation for VEO 3 Video & Nano Banana Images
@@ -82,7 +79,7 @@ If you searched for a *Google Flow batch tool*, *VEO 3 bulk generator*, or a way
 
 ### Chrome Web Store (recommended)
 
-1. Open the [**VEO Automation listing**](https://github.com/amzbase-com/veo-automation-extension?hl=en) on the Chrome Web Store.
+1. Open the [**VEO Automation listing**](https://chromewebstore.google.com/detail/veo-flow-automation-%E2%80%94-bat/inmkimakahiennggieafocbmfjlmfbhn?hl=en) on the Chrome Web Store.
 2. Click **Add to Chrome** → **Add extension**.
 3. Pin the extension: click the puzzle-piece icon in Chrome's toolbar, then the pin next to **VEO Automation**, so it's one click away next time.
 
@@ -278,7 +275,7 @@ Sign in inside the side panel to see your current quota. Manage your plan at [ht
 
 ## 🌐 Links
 
-- **Install:** [Chrome Web Store](https://github.com/amzbase-com/veo-automation-extension?hl=en)
+- **Install:** [Chrome Web Store](https://chromewebstore.google.com/detail/veo-flow-automation-%E2%80%94-bat/inmkimakahiennggieafocbmfjlmfbhn?hl=en)
 - **Website:** [https://github.com/amzbase-com/veo-automation-extension](https://github.com/amzbase-com/veo-automation-extension)
 - **Google Flow:** [labs.google/fx/tools/flow](https://labs.google/fx/tools/flow)
 
